@@ -4,18 +4,19 @@ sq,sq2={},{}
 hdI,hdQ={},{}
 hdcolor={}
 igB=input.getBool
+restarted=true
 y=0
 rotphase={}
-rotphase[0]={-74.9505,115.4133}
+rotphase[0]={-74.9505,115.4133} --YIQ to YCbCr conversion matrix
 rotphase[1]={81.8215,53.1356}
 key=property.getText(&apos;key&apos;)
-for i=0,1727 do
+for i=-864,1727 do
 hdI[i]=0
 hdQ[i]=0
 I[i]=0
 Q[i]=0
 end
-for i=0,6911 do
+for i=-3456,6911 do
 	Y[i]=0
 end
 playing,rec=false,false
@@ -53,8 +54,8 @@ sat=1
 framerate=FRAMERATE_HERE
 tickrate=62.5
 framecount=FRAMECOUNT_HERE
-
-
+frameheight=FRAMEHEIGHT_HERE
+heightadjustment=(72-frameheight)/2
 
 function onTick()
 lpressed=pressed
@@ -62,18 +63,19 @@ pressed=input.getBool(1)
 touchx=input.getNumber(3)
 touchy=input.getNumber(4)
 if not lpressed then
-	if isinRect(60,80,90,90) then
+	if isinRect(58,80,70,90) then
 		peremotka=0
 	end
 	if isinRect(25,91,58,96) then
 		k=1
+		restarted=true
 	end
-	playing=playing~=isinRect(60,80,80,90) --toggle play
+	playing=playing~=isinRect(58,80,70,90) --toggle play
 	rec=rec~=isinRect(3,82,8,93) --toggle SWMI output
 	if isinRect(47,82,56,88) then
 		if peremotka==-1 then --rewind
-			playing=false
 			peremotka=0
+			playing=false
 		else
 			peremotka=-1
 			playing=true
@@ -89,25 +91,27 @@ if not lpressed then
 		end
 	end
 end
-if (k==1 and peremotka==-1) or (k==framecount and peremotka==1) then
+if (k==1 and peremotka==-1) or (k==framecount and (peremotka==1 or playing and peremotka==0)) then
 	peremotka=0
+	playing=false
 end
 lnfr=nfr
-if rec and playing then
-	nfr=y==72
-	if nfr then
-		k=math.min(k+1,framecount)
-		tick=false
+if playing then
+	if peremotka==0 then
+		if rec then
+			nfr=y==72
+			if nfr then
+				k=math.min(k+1,framecount)
+				tick=false
+			end
+		else
+			k=math.min(math.max(k+framerate/tickrate,1),framecount) --advance frames
+		end
 	end
-else
-	if playing and peremotka==0 then
-		k=math.min(math.max(k+framerate/tickrate,1),framecount)
-	end
-	if igB(3) then k=1 end
-	k=math.min(math.max(k+peremotka*3*framerate/tickrate,1),framecount)
+	k=math.min(math.max(k+peremotka*8*framerate/tickrate,1),framecount) --fast forward/rewind
 end
-if playing or igB(3) or rec and (nfr or lnfr) then
-
+if playing or restarted or tick or igB(3) or rec and (nfr or lnfr) then
+restarted=false
 
 if tick then
 
@@ -117,7 +121,7 @@ local x -- blur to the left/right
 local y -- blur to the top/bottom
 local z -- blur to the corners
 local Y,I,Q,R,G,B=Y,I,Q,R,G,B
-for i=0,6911 do
+for i=0,96*frameheight-1 do
 	if i%192&gt;95 then
 		k=(i&gt;&gt;1)-i//192*48-48
 		x=k+i%2*2-1
@@ -157,23 +161,21 @@ tick=false
 else
 text=property.getText("frame_"..strf(&apos;%.0f&apos;,k))
 
-for i=0,6911 do --convert everything back
+for i=0,96*frameheight-1 do --convert everything back
     signal[i]=key:find(text:sub(i+1,i+1),nil,true)-1
 end
 
-if #text&gt;7000 then
-	for i=0,863 do
-		hdcolor[i]=key:find(text:sub(i+6913,i+6913),nil,true)-1
-		hdI[i*2]=hdcolor[i]%3
-		hdQ[i*2]=(hdcolor[i]//3)%3
-		hdI[i*2+1]=(hdcolor[i]//9)%3
-		hdQ[i*2+1]=(hdcolor[i]//27)
-	end
+for i=0,12*frameheight-1 do
+	hdcolor[i]=key:find(text:sub(i+96*frameheight+1,i+96*frameheight+1),nil,true)-1
+	hdI[i*2]=hdcolor[i]%3
+	hdQ[i*2]=(hdcolor[i]//3)%3
+	hdI[i*2+1]=(hdcolor[i]//9)%3
+	hdQ[i*2+1]=(hdcolor[i]//27)
 end
 
 local sign,bl,lr,tb,ch
 local signal,Y,I,Q=signal,Y,I,Q
-for k=0,1727 do
+for k=0,24*frameheight-1 do
 	sign=signal[k*4+1]*111+signal[k*4+2]
 	bl=(signal[k*4]/110) --2x2 block decoding
 	lr=(sign%23-11)/11
@@ -195,10 +197,10 @@ end
 if rec then
 if y&lt;72 then
 for x=0,47 do --YIQ to YCbCr conversion
-	C[x]=clamp((rotphase[y%2][1]*I[x+y//2*48]+rotphase[y%2][2]*Q[x+y//2*48]+60.5)//1,0,120)
+	C[x]=clamp((rotphase[y%2][1]*I[x+(y-heightadjustment)//2*48]+rotphase[y%2][2]*Q[x+(y-heightadjustment)//2*48]+60.5)//1,0,120)
 end
 for x=0,95 do
-	Yo[x]=clamp((Y[y*96+x]*120+.5)//1,0,120)
+	Yo[x]=clamp((Y[(y-heightadjustment)*96+x]*120+.5)//1,0,120)
 end
 for i=0,15 do --SWMI output
 	local out1,out2=encode(Yo[i*6],Yo[i*6+1],Yo[i*6+2],Yo[i*6+3],Yo[i*6+4],Yo[i*6+5],C[i*3],C[i*3+1],C[i*3+2])
@@ -221,9 +223,9 @@ end
 local s=screen
 local R,G,B=R,G,B
 function onDraw()
-	for i=0,6911 do --drawing the image
+	for i=0,96*frameheight-1 do --drawing the image
 		s.setColor(R[i],G[i],B[i])
-		s.drawRectF(i%96,i//96,1,1)
+		s.drawRectF(i%96,i//96+heightadjustment,1,1)
 	end
 	s.setColor(200,50,0)
 	s.drawRectF(0,72,96,24)
