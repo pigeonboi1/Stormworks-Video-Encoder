@@ -15,7 +15,7 @@ YUVmatrix = np.dot(1/255,
 
 
 
-def fread(location: str, frame: int):
+def fread(frame: int):
     im = iio.imread(
         location,
         index=math.floor(frame),
@@ -114,13 +114,13 @@ for video in os.listdir("videos"):
         print(f"Framecount: {num_frames}")
         print(f"Framerate: {fps}")
         for n in range(1,num_frames):
-            fread(location, n)
+            fread(n)
             print(n)
         f = open("resources/object.xml")
         videofile = f.read()
         f.close
         f = open("resources/template.xml") #set important values + title
-        file = f.read().replace("TITLE_HERE",nameofmodule.replace(".mp4","")).replace("FRAMERATE_HERE",f"{fps:.3f}").replace("FRAMECOUNT_HERE",f"{num_frames-1}").replace("≥",videofile)
+        file = f.read().replace("TITLE_HERE",nameofmodule.replace(".mp4","")).replace("FRAMERATE_HERE",f"{fps:.3f}").replace("FRAMECOUNT_HERE",f"{num_frames-1}").replace("FRAMEHEIGHT_HERE",f"{height}").replace("≥",videofile)
         f.close
         f = open(f"xmls/{nameofmodule}".replace(".mp4",".xml"), 'w')
         f.write(file)
