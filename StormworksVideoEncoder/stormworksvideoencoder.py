@@ -88,20 +88,20 @@ def fread(frame: int):
 
     text = ""
     for n in range(0, height * 96): #convert everything to text
-        text = text + chr(mf(signal[n]+9.5))
+        text = text + chr(min(mf(signal[n]+9.5),121))
     text = text + hdtext
-    text=text.replace('"','~').replace('&', '{').replace(chr(10),'}').replace(chr(13),'|') #remove some unusable characters
+    text=text.replace('"','~').replace('&', '{').replace(chr(10),'}').replace(chr(13),'|').replace(chr(11),'z') #remove some unusable characters
     xpos = (frame-1)%50-25
     ypos = 25-(((frame-1)%5000)//50)/2
     obj = f'</object></c><c type="58"><object id="{frame+16317}" n="frame_{frame}" v="{text}"><pos x="{xpos}" y="{ypos}"/>'
-    f = open("resources/object.xml", 'a')
+    f = open("resources/object.xml", 'a', encoding='ascii')
     f.write(obj)
     f.close
     
 
 for video in os.listdir("videos"):
     if video.endswith(".mp4"):
-        f = open("resources/object.xml", 'w')
+        f = open("resources/object.xml", 'w', encoding='ascii')
         f.write("")
         nameofmodule = video
         print(nameofmodule)
@@ -116,13 +116,13 @@ for video in os.listdir("videos"):
         for n in range(1,num_frames):
             fread(n)
             print(n)
-        f = open("resources/object.xml")
+        f = open("resources/object.xml", encoding='ascii')
         videofile = f.read()
         f.close
-        f = open("resources/template.xml") #set important values + title
-        file = f.read().replace("TITLE_HERE",nameofmodule.replace(".mp4","")).replace("FRAMERATE_HERE",f"{fps:.3f}").replace("FRAMECOUNT_HERE",f"{num_frames-1}").replace("FRAMEHEIGHT_HERE",f"{height}").replace("≥",videofile)
+        f = open("resources/template.xml", encoding='ascii') #set important values + title
+        file = f.read().replace("TITLE_HERE",nameofmodule.replace(".mp4","")).replace("FRAMERATE_HERE",f"{fps:.3f}").replace("FRAMECOUNT_HERE",f"{num_frames-1}").replace("FRAMEHEIGHT_HERE",f"{height}").replace("TEXTS_HERE",videofile)
         f.close
-        f = open(f"xmls/{nameofmodule}".replace(".mp4",".xml"), 'w')
+        f = open(f"xmls/{nameofmodule}".replace(".mp4",".xml"), 'w', encoding='ascii')
         f.write(file)
         f.close()
 
