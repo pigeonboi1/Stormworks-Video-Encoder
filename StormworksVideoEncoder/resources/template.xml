@@ -163,10 +163,13 @@ text=property.getText("frame_"..strf(&apos;%.0f&apos;,k))
 
 for i=0,96*frameheight-1 do --convert everything back
     signal[i]=key:find(text:sub(i+1,i+1),nil,true)-1
+    if key:find(text:sub(i+1,i+1),nil,true)==nil then
+	missingno=string.byte(text:sub(i+1,i+1))
+    end
 end
 
 for i=0,12*frameheight-1 do
-	hdcolor[i]=key:find(text:sub(i+96*frameheight+1,i+96*frameheight+1),nil,true)-1
+	hdcolor[i]=key:find(text:sub(i+96*frameheight+1,i+96*frameheight+1) or " ",nil,true)-1
 	hdI[i*2]=hdcolor[i]%3
 	hdQ[i*2]=(hdcolor[i]//3)%3
 	hdI[i*2+1]=(hdcolor[i]//9)%3
@@ -273,4 +276,5 @@ function onDraw()
 	s.drawRectF(72,82,1,5)
 	s.drawRectF(76,82,1,2)
 	s.drawRectF(76,85,1,2)
-end'><pos x="-5" y="1.75"/><in1 component_id="2801"/></object></c><c type="58"><object id="4417" n="key" v="	}| !~#$%{'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz"><pos x="-5" y="2.5"/>≥</object></c></components><components_bridge><c type="7"><object id="5"><pos x="-3.75" y="1.75"/><in1 component_id="279" node_index="1"/></object></c><c type="4"><object id="2801"><pos x="-6.25" y="2"/></object></c><c type="5"><object id="4426"><pos x="-3.75" y="2"/><in1 component_id="279"/></object></c></components_bridge><groups/></group></microprocessor_definition><vp y="1"/><logic_slots><slot/><slot/><slot/></logic_slots></o></c></components></body></bodies><logic_node_links><logic_node_link type="4"><voxel_pos_1 x="-1" y="1"/></logic_node_link><logic_node_link type="4"><voxel_pos_0 x="-1" y="3" z="1"/></logic_node_link><logic_node_link><voxel_pos_0 x="-1" y="1"/><voxel_pos_1 x="-1" y="3" z="1"/></logic_node_link><logic_node_link type="4"><voxel_pos_0 y="-1" z="2"/></logic_node_link><logic_node_link type="5"><voxel_pos_0 y="1"/><voxel_pos_1 z="2"/></logic_node_link><logic_node_link type="5"><voxel_pos_0 x="-1" y="3" z="1"/><voxel_pos_1 y="1" z="1"/></logic_node_link><logic_node_link type="6"><voxel_pos_0 y="1" z="1"/><voxel_pos_1 x="-1" y="3" z="1"/></logic_node_link></logic_node_links></vehicle>
+	s.drawText(0,0,missingno)
+end'><pos x="-5" y="1.75"/><in1 component_id="2801"/></object></c><c type="58"><object id="4417" n="key" v="	}z| !~#$%{'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxy"><pos x="-5" y="2.5"/>TEXTS_HERE</object></c></components><components_bridge><c type="7"><object id="5"><pos x="-3.75" y="1.75"/><in1 component_id="279" node_index="1"/></object></c><c type="4"><object id="2801"><pos x="-6.25" y="2"/></object></c><c type="5"><object id="4426"><pos x="-3.75" y="2"/><in1 component_id="279"/></object></c></components_bridge><groups/></group></microprocessor_definition><vp y="1"/><logic_slots><slot/><slot/><slot/></logic_slots></o></c></components></body></bodies><logic_node_links><logic_node_link type="4"><voxel_pos_1 x="-1" y="1"/></logic_node_link><logic_node_link type="4"><voxel_pos_0 x="-1" y="3" z="1"/></logic_node_link><logic_node_link><voxel_pos_0 x="-1" y="1"/><voxel_pos_1 x="-1" y="3" z="1"/></logic_node_link><logic_node_link type="4"><voxel_pos_0 y="-1" z="2"/></logic_node_link><logic_node_link type="5"><voxel_pos_0 y="1"/><voxel_pos_1 z="2"/></logic_node_link><logic_node_link type="5"><voxel_pos_0 x="-1" y="3" z="1"/><voxel_pos_1 y="1" z="1"/></logic_node_link><logic_node_link type="6"><voxel_pos_0 y="1" z="1"/><voxel_pos_1 x="-1" y="3" z="1"/></logic_node_link></logic_node_links></vehicle>
