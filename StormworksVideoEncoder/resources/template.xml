@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><vehicle data_version="3" bodies_id="587"><editor_placement_offset x="-16.464603" y="-4.25" z="12.106134"/><authors/><bodies><body unique_id="580"><components><c d="button_toggle"><o r="0,0,-1,-1,0,0,0,1,0" bc="AB5236" bc2="454545" bc3="454545" ac="FF0000" sc="5,454545,AB5236,454545,C8C8C8,454545" custom_name="Monitor" hold_duration="1"><vp x="-1" y="1"/><logic_slots><slot/><slot/><slot/><slot/><slot/></logic_slots><min_lever_value text="0"/><max_lever_value text="1" value="1"/><starting_lever_value text="0"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="454545" ac="454545" sc="6,454545,AB5236,454545,454545,AB5236,C8C8C8"><vp x="-1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="454545" ac="454545" sc="6,454545,454545,454545,454545,AB5236,C8C8C8"><vp x="-1" z="1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="454545" ac="454545" sc="6,AB5236,454545,454545,454545,AB5236,C8C8C8"><vp x="-1" z="2"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="454545" ac="454545" sc="6,AB5236,454545,454545,454545,AB5236,C8C8C8"><vp x="-1" y="1" z="2"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="454545" ac="454545" sc="6,454545,454545,454545,454545,AB5236,C8C8C8"><vp x="-1" y="1" z="1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="454545" ac="454545" sc="6,454545,AB5236,454545,454545,454545,AB5236"><vp y="-1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="454545" ac="454545" sc="6,454545,454545,454545,454545,454545,AB5236"><vp y="-1" z="1"/></o></c><c d="battery_small"><o r="0,0,-1,0,1,0,1,0,0" bc="454545" ac="454545" sc="2"><logic_slots><slot/><slot/><slot/></logic_slots></o></c><c d="rope_hook_composite"><o r="1,0,0,0,0,1,0,-1,0" bc="8CFF" bc2="454545" bc3="D3D3D3" ac="454545" sc="6,454545,454545,AB5236,454545,454545,454545" custom_name="SWMI" input_velocity="1"><vp z="2"/><logic_slots><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/></logic_slots></o></c><c d="rope_hook_composite"><o r="1,0,0,0,0,1,0,-1,0" bc="FFFF00" bc2="454545" bc3="D3D3D3" ac="454545" sc="6,454545,454545,AB5236,454545,454545,454545" custom_name="Power" input_velocity="1"><vp y="-1" z="2"/><logic_slots><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/></logic_slots></o></c><c d="monitor_3"><o r="0,0,-1,-1,0,0,0,1,0" bc="FFE727" ac="FFE727" sc="21,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,C8C8C8,FFE727,FFE727,FFE727"><vp x="-1" y="3" z="1"/><logic_slots><slot editor_connected="1"/><slot/><slot editor_connected="1"/></logic_slots></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="454545" ac="454545" sc="6,454545,AB5236,454545,454545,AB5236,C8C8C8"><vp x="-1" y="-1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="454545" ac="454545" sc="6,454545,454545,454545,454545,AB5236,C8C8C8"><vp x="-1" y="-1" z="1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="454545" ac="454545" sc="6,AB5236,454545,454545,454545,AB5236,C8C8C8"><vp x="-1" y="-1" z="2"/></o></c><c d="microprocessor"><o r="1,0,0,0,1,0,0,0,1" sc="10"><microprocessor_definition name="TITLE_HERE" description="Created by Bluejammer" width="1" length="2" id_counter="4426" id_counter_node="7" sym2="16380" sym3="16380" sym4="16380" sym5="8196" sym6="8196" sym7="8324" sym8="8580" sym9="8580" sym10="8324" sym11="8212" sym12="8196" sym13="16380"><nodes><n id="2" component_id="5"><node label="Video Out" type="6"><position z="1"/></node></n><n id="6" component_id="2801"><node label="Monitor Input" mode="1" type="5"><position z="1"/></node></n><n id="7" component_id="4426"><node label="SWMI Out" type="5"/></n></nodes><group><data type="146"><inputs/><outputs/></data><components><c type="56"><object id="279" script='signal={}
-Y,Yo,C,I,Q,R,G,B={},{},{},{},{},{},{},{}
+<?xml version="1.0" encoding="UTF-8"?><vehicle data_version="3" bodies_id="589"><editor_placement_offset x="-16.464603" y="-4.25" z="12.106134"/><authors/><bodies><body unique_id="580"><components><c><o r="1,0,0,0,1,0,0,0,1" bc="454545" ac="454545" sc="6,454545,AB5236,454545,454545,454545,AB5236"><vp y="-1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="454545" ac="454545" sc="6,454545,454545,454545,454545,454545,AB5236"><vp y="-1" z="1"/></o></c><c d="battery_small"><o r="0,0,-1,0,1,0,1,0,0" bc="454545" ac="454545" sc="2"><logic_slots><slot/><slot/><slot/></logic_slots></o></c><c d="rope_hook_composite"><o r="1,0,0,0,0,1,0,-1,0" bc="8CFF" bc2="454545" bc3="D3D3D3" ac="454545" sc="6,454545,454545,AB5236,454545,454545,454545" custom_name="SWMI" input_velocity="1"><vp z="2"/><logic_slots><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/></logic_slots></o></c><c d="rope_hook_composite"><o r="1,0,0,0,0,1,0,-1,0" bc="FFFF00" bc2="454545" bc3="D3D3D3" ac="454545" sc="6,454545,454545,AB5236,454545,454545,454545" custom_name="Power" input_velocity="1"><vp y="-1" z="2"/><logic_slots><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/><slot/></logic_slots></o></c><c d="monitor_5"><o r="0,0,-1,-1,0,0,0,1,0" bc="C8C8C8" ac="C8C8C8" sc="31"><vp x="-1" y="3" z="1"/><logic_slots><slot editor_connected="1"/><slot/><slot editor_connected="1"/></logic_slots></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="AB5236" ac="AB5236" sc="6"><vp x="-1" y="-1" z="-1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="AB5236" ac="AB5236" sc="6"><vp x="-1" y="-1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="AB5236" ac="AB5236" sc="6"><vp x="-1" y="-1" z="1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="AB5236" ac="AB5236" sc="6"><vp x="-1" y="-1" z="2"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="AB5236" ac="AB5236" sc="6"><vp x="-1" y="-1" z="3"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="AB5236" ac="AB5236" sc="6"><vp x="-1" z="-1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="AB5236" ac="AB5236" sc="6"><vp x="-1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="AB5236" ac="AB5236" sc="6"><vp x="-1" z="1"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="AB5236" ac="AB5236" sc="6"><vp x="-1" z="2"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="AB5236" ac="AB5236" sc="6"><vp x="-1" z="3"/></o></c><c><o r="1,0,0,0,1,0,0,0,1" bc="AB5236" ac="AB5236" sc="6"><vp x="-1" y="1" z="3"/></o></c><c d="monitor_1x3"><o r="0,0,-1,-1,0,0,0,1,0" bc="AB5236" ac="AB5236" sc="11"><vp x="-1" y="1" z="1"/><logic_slots><slot editor_connected="1"/><slot/><slot editor_connected="1"/></logic_slots></o></c><c d="button_toggle"><o r="0,0,-1,-1,0,0,0,1,0" bc="AB5236" bc2="454545" bc3="454545" ac="FF0000" sc="5,454545,AB5236,454545,C8C8C8,454545" custom_name="Monitor" hold_duration="1"><vp x="-1" y="1" z="-1"/><logic_slots><slot/><slot/><slot/><slot/><slot/></logic_slots><min_lever_value text="0"/><max_lever_value text="1" value="1"/><starting_lever_value text="0"/></o></c><c d="microprocessor"><o r="1,0,0,0,1,0,0,0,1" sc="10"><microprocessor_definition name="TITLE_HERE" description="Created by Bluejammer" width="1" length="2" id_counter="4428" id_counter_node="7" sym2="16380" sym3="16380" sym4="16380" sym5="8196" sym6="8196" sym7="8324" sym8="8580" sym9="8580" sym10="8324" sym11="8212" sym12="8196" sym13="16380"><nodes><n id="2" component_id="5"><node label="Video Out" type="6"><position z="1"/></node></n><n id="6" component_id="2801"><node label="Monitor Input" mode="1" type="5"><position z="1"/></node></n><n id="7" component_id="4426"><node label="SWMI Out" type="5"/></n></nodes><group><data type="146"><inputs/><outputs/></data><components><c type="56"><object id="279" script='signal={}
+Y,Yo,C,I,Q,RGB={},{},{},{},{},{}
 sq,sq2={},{}
 hdI,hdQ={},{}
 hdcolor={}
@@ -9,16 +9,26 @@ y=0
 rotphase={}
 rotphase[0]={-74.9505,115.4133} --YIQ to YCbCr conversion matrix
 rotphase[1]={81.8215,53.1356}
-key=property.getText(&apos;key&apos;)
-for i=-864,1727 do
+pgT=property.getText
+key=pgT(&apos;key&apos;)
+for i=-864,6919 do
 hdI[i]=0
 hdQ[i]=0
 I[i]=0
 Q[i]=0
 end
-for i=-3456,6911 do
+for i=-3456,27679 do
 	Y[i]=0
 end
+
+
+HDY={}
+HDC={}
+for x=0,159 do
+	HDY[x]=0
+	HDC[x]=60
+end
+
 playing,rec=false,false
 peremotka=0
 strf=string.format
@@ -29,12 +39,32 @@ end
 for n=0,26 do
 	sq2[n] = math.abs((n-13)/12)*((n-13)/12)*0.5226
 end
-
+blur={}
+local k,x,y,z
+for i=0,15359 do --precalculate upscaling
+	k=i//2%80+i//320*80
+	x=k+i%2*2-1
+	y=k+(i//160%2*2-1)*80
+	z=y+i%2*2-1
+	if i%160==0 or i%160==159 then
+		x=k
+		z=y
+	end
+	if i&gt;15199 or i&lt;160 then
+		y=k
+		z=x
+	end
+	blur[i]={k,x,y,z}
+end
 
 local sp,sup=string.pack,string.unpack
 function encode(a,b,c,d,e,f,g,h,i)
     return sup(&apos;f&apos;,sp(&apos;I&apos;,a&lt;&lt;25|b&lt;&lt;18|c&lt;&lt;11|d&lt;&lt;4|i&amp;15)),sup(&apos;f&apos;,sp(&apos;I&apos;,e&lt;&lt;25|f&lt;&lt;18|g&lt;&lt;11|h&lt;&lt;4|i&gt;&gt;4))
 end
+function Ch(y2,x) --YIQ to YCbCr
+	return clamp((rotphase[y%2][1]*I[x+y2*80]+rotphase[y%2][2]*Q[x+y2*80]+60.5)//1,0,120)
+end
+
 function clamp(x,y,z)
 	if x&lt;y then
 		x=y
@@ -52,27 +82,25 @@ brl=255
 con=2.2
 sat=1
 framerate=FRAMERATE_HERE
-tickrate=62.5
+tickrate=60
 framecount=FRAMECOUNT_HERE
-frameheight=FRAMEHEIGHT_HERE
-heightadjustment=(72-frameheight)/2
-
+local a,b,c=0,0,0
 function onTick()
 lpressed=pressed
 pressed=input.getBool(1)
 touchx=input.getNumber(3)
 touchy=input.getNumber(4)
 if not lpressed then
-	if isinRect(58,80,70,90) then
+	if isinRect(58,8,70,18) then
 		peremotka=0
 	end
-	if isinRect(25,91,58,96) then
+	if isinRect(25,20,58,26) then
 		k=1
 		restarted=true
 	end
-	playing=playing~=isinRect(58,80,70,90) --toggle play
-	rec=rec~=isinRect(3,82,8,93) --toggle SWMI output
-	if isinRect(47,82,56,88) then
+	playing=playing~=isinRect(58,8,70,18) --toggle play
+	rec=rec~=isinRect(3,10,8,21) --toggle SWMI output
+	if isinRect(47,10,56,16) then
 		if peremotka==-1 then --rewind
 			peremotka=0
 			playing=false
@@ -81,7 +109,7 @@ if not lpressed then
 			playing=true
 		end
 	end
-	if isinRect(72,82,82,88) then --fast forward
+	if isinRect(72,10,82,16) then --fast forward
 		if peremotka==1 then
 			peremotka=0
 			playing=false
@@ -99,7 +127,7 @@ lnfr=nfr
 if playing then
 	if peremotka==0 then
 		if rec then
-			nfr=y==72
+			nfr=y==173
 			if nfr then
 				k=math.min(k+1,framecount)
 				tick=false
@@ -110,66 +138,39 @@ if playing then
 	end
 	k=math.min(math.max(k+peremotka*8*framerate/tickrate,1),framecount) --fast forward/rewind
 end
-if playing or restarted or tick or igB(3) or rec and (nfr or lnfr) then
+if playing and not rec or restarted or tick or igB(3) or rec and (nfr or lnfr) then
 restarted=false
 
 if tick then
 
 
-local k
-local x -- blur to the left/right
-local y -- blur to the top/bottom
-local z -- blur to the corners
-local Y,I,Q,R,G,B=Y,I,Q,R,G,B
-for i=0,96*frameheight-1 do
-	if i%192&gt;95 then
-		k=(i&gt;&gt;1)-i//192*48-48
-		x=k+i%2*2-1
-		y=k+48
-		z=x+48
-	else
-		k=(i&gt;&gt;1)-i//192*48
-		x=k+i%2*2-1
-		y=k-48
-		z=x-48
-	end
-	if i%96==0 or i%96==95 then
-		x=k
-		z=y
-	end
-	if i&gt;6815 or i&lt;96 then
-		y=k
-		z=x
-	end
-	local I2=I[k]*0.5625+I[x]*0.1875+I[y]*0.1875+I[z]*0.0625 --upscaling the color
-	local Q2=Q[k]*0.5625+Q[x]*0.1875+Q[y]*0.1875+Q[z]*0.0625
-	R[i]=Y[i]+0.9469*I2+0.6236*Q2 --YIQ to RGB conversion
-	G[i]=Y[i]-0.2748*I2-0.6357*Q2
-	B[i]=Y[i]-1.1000*I2+1.7000*Q2
-	if R[i]&lt;0 then R[i]=0 end
-	if G[i]&lt;0 then G[i]=0 end
-	if B[i]&lt;0 then B[i]=0 end
-	R[i]=R[i]^con*brl
-	G[i]=G[i]^con*brl
-	B[i]=B[i]^con*brl
-	if R[i]&gt;255 then R[i]=255 end
-	if G[i]&gt;255 then G[i]=255 end
-	if B[i]&gt;255 then B[i]=255 end
+local Y,I,Q,RGB,blur,R,G,B=Y,I,Q,RGB,blur
+for i=0,15359 do
+	local b=blur[i]
+	local I2=I[b[1]]*0.5625+I[b[2]]*0.1875+I[b[3]]*0.1875+I[b[4]]*0.0625 --upscaling the color
+	local Q2=Q[b[1]]*0.5625+Q[b[2]]*0.1875+Q[b[3]]*0.1875+Q[b[4]]*0.0625
+	R=Y[i]+0.9469*I2+0.6236*Q2 --YIQ to RGB conversion
+	G=Y[i]-0.2748*I2-0.6357*Q2
+	B=Y[i]-1.1000*I2+1.7000*Q2
+	R=R&gt;0 and R or 0
+	G=G&gt;0 and G or 0
+	B=B&gt;0 and B or 0
+	R=(R^2.2*255+.5)//1
+	G=(G^2.2*255+.5)//1
+	B=(B^2.2*255+.5)//1
+	RGB[i]=((R&lt;255 and R or 255)&lt;&lt;16)+((G&lt;255 and G or 255)&lt;&lt;8)+(B&lt;255 and B or 255)
 end
 
 tick=false
 else
-text=property.getText("frame_"..strf(&apos;%.0f&apos;,k))
+text=pgT("frame_"..strf(&apos;%.0f&apos;,k).."a")..pgT("frame_"..strf(&apos;%.0f&apos;,k).."b")..pgT("frame_"..strf(&apos;%.0f&apos;,k).."c")
 
-for i=0,96*frameheight-1 do --convert everything back
+for i=0,15359 do --convert everything back
     signal[i]=key:find(text:sub(i+1,i+1),nil,true)-1
-    if key:find(text:sub(i+1,i+1),nil,true)==nil then
-	missingno=string.byte(text:sub(i+1,i+1))
-    end
 end
 
-for i=0,12*frameheight-1 do
-	hdcolor[i]=key:find(text:sub(i+96*frameheight+1,i+96*frameheight+1) or " ",nil,true)-1
+for i=0,1919 do
+	hdcolor[i]=key:find(text:sub(i+15361,i+15361),nil,true)-1
 	hdI[i*2]=hdcolor[i]%3
 	hdQ[i*2]=(hdcolor[i]//3)%3
 	hdI[i*2+1]=(hdcolor[i]//9)%3
@@ -178,7 +179,7 @@ end
 
 local sign,bl,lr,tb,ch
 local signal,Y,I,Q=signal,Y,I,Q
-for k=0,24*frameheight-1 do
+for k=0,3839 do
 	sign=signal[k*4+1]*111+signal[k*4+2]
 	bl=(signal[k*4]/110) --2x2 block decoding
 	lr=(sign%23-11)/11
@@ -187,10 +188,10 @@ for k=0,24*frameheight-1 do
 	lr=(lr*math.abs(lr))
 	tb=(tb*math.abs(tb))
 	ch=(ch*math.abs(ch))
-	Y[k*2+k//48*96]=(1+lr+tb+ch)*bl
-	Y[k*2+k//48*96+1]=(1-lr+tb-ch)*bl
-	Y[k*2+k//48*96+96]=(1+lr-tb-ch)*bl
-	Y[k*2+k//48*96+97]=(1-lr-tb+ch)*bl
+	Y[k*2+k//80*160]=(1+lr+tb+ch)*bl
+	Y[k*2+k//80*160+1]=(1-lr+tb-ch)*bl
+	Y[k*2+k//80*160+160]=(1+lr-tb-ch)*bl
+	Y[k*2+k//80*160+161]=(1-lr-tb+ch)*bl
 	I[k]=sq[signal[k*4+3]%13*3+hdI[k]]*sat
 	Q[k]=sq2[signal[k*4+3]//13*3+hdQ[k]]*sat
 end
@@ -198,43 +199,70 @@ tick = true
 end
 end
 if rec then
-if y&lt;72 then
-for x=0,47 do --YIQ to YCbCr conversion
-	C[x]=clamp((rotphase[y%2][1]*I[x+(y-heightadjustment)//2*48]+rotphase[y%2][2]*Q[x+(y-heightadjustment)//2*48]+60.5)//1,0,120)
-end
-for x=0,95 do
-	Yo[x]=clamp((Y[(y-heightadjustment)*96+x]*120+.5)//1,0,120)
-end
-for i=0,15 do --SWMI output
-	local out1,out2=encode(Yo[i*6],Yo[i*6+1],Yo[i*6+2],Yo[i*6+3],Yo[i*6+4],Yo[i*6+5],C[i*3],C[i*3+1],C[i*3+2])
-	output.setNumber(i*2+1,out1)
-	output.setNumber(i*2+2,out2)
-end
-end
-y=y+1
-if y&gt;72 then
-	y=0
-end
-output.setBool(1,y==72)
-output.setBool(2,y%2==0)
-output.setBool(4,y==72 and rec)
+	pn=y&lt;72 and 1 or -1
+	if y&gt;5 and y&lt;66 then
+		y2=y-6
+		a,b,c=8/5,1,.5
+	elseif y&gt;71 and y&lt;108 then
+		y2=y-72
+		a,b,c=8/3,1.8,.8
+	elseif y&gt;107 and y&lt;172 then
+		y2=y-108
+		y3,y4=(y2*5/2+.5)//1,(y2//2*5/2+.5)//1
+		for x=0,95 do
+			HDY[x]=clamp(((Y[x*160+y3+1]-Y[x*160+y3])*120+121)//2,0,120)
+		end
+		for x=0,47 do
+			HDC[x]=(Ch(x,y4+1)-Ch(x,y4)+121)//2
+		end
+	else
+		y2=-1
+	end
+	if y&lt;108 then
+	local y3,y4=(y2*a+b)//1,(y2*a+c)//1
+	for x=0,95 do
+		local x2,x3=(x*5/3+.5)//1,(x*5/3+1)//1
+		HDY[x]=clamp(((Y[y3*160+x2]+pn*Y[y4*160+x2]+Y[y3*160+x3]+pn*Y[y4*160+x3])*120-120*pn+122)//4,0,120)
+	end
+	local Cbr1,Cbr2=(y2//2*a+b)//1,(y2//2*a+c)//1
+	for x=0,47 do
+		local x2,x3=(x*5/3+.5)//1,(x*5/3+1)//1
+		HDC[x]=(Ch(Cbr1,x2)+pn*Ch(Cbr2,x2)+Ch(Cbr1,x3)+pn*Ch(Cbr2,x3)-120*pn+122)//4
+	end
+	end
+	for i=0,15 do --video output encoder
+		local comp1,comp2=encode(HDY[i*6],HDY[i*6+1],HDY[i*6+2],HDY[i*6+3],HDY[i*6+4],HDY[i*6+5],HDC[i*3],HDC[i*3+1],HDC[i*3+2])
+		output.setNumber(i*2+1,comp1)
+		output.setNumber(i*2+2,comp2)
+	end
+	y=(y+1)%174
+	output.setBool(1,y==173)
+	output.setBool(2,y%2==0)
+	output.setBool(4,y==173 and rec)
+	output.setBool(24,true)
+	output.setBool(25,true)
 end
 output.setBool(24,rec)
 end
 
 
 local s=screen
-local R,G,B=R,G,B
+local sc=s.setColor
+local sd=s.drawRectF
+local RGB=RGB
 function onDraw()
-	for i=0,96*frameheight-1 do --drawing the image
-		s.setColor(R[i],G[i],B[i])
-		s.drawRectF(i%96,i//96+heightadjustment,1,1)
+	if s.getWidth()==160 then
+	for i=0,15359 do --drawing the image
+		local x=RGB[i]
+		sc(x&gt;&gt;16,x&gt;&gt;8,x)
+		sd(i%160,i//160,1,1)
 	end
+	else
 	s.setColor(200,50,0)
-	s.drawRectF(0,72,96,24)
+	s.drawRectF(0,0,96,32)
 	s.setColor(0,0,0)
-	s.drawText(25,90,&apos;restart&apos;)
-	s.drawRectF(0,72,41,7)
+	s.drawText(25,20,&apos;restart&apos;)
+	s.drawRectF(0,0,41,7)
 	s.setColor(255,255,255)
 	local str=strf(&apos;%.0f&apos;,k//(framerate*60))
 	while #str&lt;2 do
@@ -252,29 +280,29 @@ function onDraw()
 	else
 		str=str..&apos;0&apos;..strf(&apos;%.0f&apos;,k%framerate//1)
 	end
-	s.drawText(1,73,str)
+	s.drawText(1,1,str)
 	if playing then
-		s.drawRectF(60,79,3,12)
-		s.drawRectF(66,79,3,12)
+		s.drawRectF(60,7,3,12)
+		s.drawRectF(66,7,3,12)
 	else
-		s.drawTriangleF(70,85,60,80,60,90)
+		s.drawTriangleF(70,13,60,8,60,18)
 	end
-	s.drawText(11,83,&apos;SWMI&apos;)
-	s.drawTriangleF(51,85,56,82,56,88)
-	s.drawTriangleF(47,85,52,82,52,88)
-	s.drawTriangleF(77.5,85,72,82,72,88)
-	s.drawTriangleF(81.5,85,76,82,76,88)
+	s.drawText(11,11,&apos;SWMI&apos;)
+	s.drawTriangleF(51,13,56,10,56,16)
+	s.drawTriangleF(47,13,52,10,52,16)
+	s.drawTriangleF(77.5,13,72,10,72,16)
+	s.drawTriangleF(81.5,13,76,10,76,16)
 	s.setColor(15,15,15)
-	s.drawRectF(4,82,4,11)
+	s.drawRectF(4,10,4,11)
 	s.setColor(0,0,0)
 	if rec then
-		s.drawRectF(4,82,4,4)
+		s.drawRectF(4,10,4,4)
 	else
-		s.drawRectF(4,89,4,4)
+		s.drawRectF(4,17,4,4)
 	end
 	s.setColor(200,50,0)
-	s.drawRectF(72,82,1,5)
-	s.drawRectF(76,82,1,2)
-	s.drawRectF(76,85,1,2)
-	s.drawText(0,0,missingno)
-end'><pos x="-5" y="1.75"/><in1 component_id="2801"/></object></c><c type="58"><object id="4417" n="key" v="	}z| !~#$%{'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxy"><pos x="-5" y="2.5"/>TEXTS_HERE</object></c></components><components_bridge><c type="7"><object id="5"><pos x="-3.75" y="1.75"/><in1 component_id="279" node_index="1"/></object></c><c type="4"><object id="2801"><pos x="-6.25" y="2"/></object></c><c type="5"><object id="4426"><pos x="-3.75" y="2"/><in1 component_id="279"/></object></c></components_bridge><groups/></group></microprocessor_definition><vp y="1"/><logic_slots><slot/><slot/><slot/></logic_slots></o></c></components></body></bodies><logic_node_links><logic_node_link type="4"><voxel_pos_1 x="-1" y="1"/></logic_node_link><logic_node_link type="4"><voxel_pos_0 x="-1" y="3" z="1"/></logic_node_link><logic_node_link><voxel_pos_0 x="-1" y="1"/><voxel_pos_1 x="-1" y="3" z="1"/></logic_node_link><logic_node_link type="4"><voxel_pos_0 y="-1" z="2"/></logic_node_link><logic_node_link type="5"><voxel_pos_0 y="1"/><voxel_pos_1 z="2"/></logic_node_link><logic_node_link type="5"><voxel_pos_0 x="-1" y="3" z="1"/><voxel_pos_1 y="1" z="1"/></logic_node_link><logic_node_link type="6"><voxel_pos_0 y="1" z="1"/><voxel_pos_1 x="-1" y="3" z="1"/></logic_node_link></logic_node_links></vehicle>
+	s.drawRectF(72,10,1,5)
+	s.drawRectF(76,10,1,2)
+	s.drawRectF(76,13,1,2)
+	end
+end'><pos x="-5" y="1.75"/><in1 component_id="2801"/></object></c><c type="58"><object id="4417" n="key" v="	}z| !~#$%{'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxy"><pos x="-5" y="2.5"/>TEXTS_HERE</object></c></components><components_bridge><c type="7"><object id="5"><pos x="-3.75" y="1.75"/><in1 component_id="279" node_index="1"/></object></c><c type="4"><object id="2801"><pos x="-6.25" y="2"/></object></c><c type="5"><object id="4426"><pos x="-3.75" y="2"/><in1 component_id="279"/></object></c></components_bridge><groups/></group></microprocessor_definition><vp y="1"/><logic_slots><slot/><slot/><slot/></logic_slots></o></c></components></body></bodies><logic_node_links><logic_node_link type="4"><voxel_pos_0 y="-1" z="2"/></logic_node_link><logic_node_link><voxel_pos_0 x="-1" y="1" z="-1"/><voxel_pos_1 x="-1" y="3" z="1"/></logic_node_link><logic_node_link type="4"><voxel_pos_0 x="-1" y="3" z="1"/></logic_node_link><logic_node_link type="4"><voxel_pos_1 x="-1" y="1" z="-1"/></logic_node_link><logic_node_link><voxel_pos_0 x="-1" y="1" z="-1"/><voxel_pos_1 x="-1" y="3" z="1"/></logic_node_link><logic_node_link><voxel_pos_0 x="-1" y="1" z="-1"/><voxel_pos_1 x="-1" y="1" z="1"/></logic_node_link><logic_node_link type="4"><voxel_pos_0 x="-1" y="1" z="1"/></logic_node_link><logic_node_link type="5"><voxel_pos_0 y="1"/><voxel_pos_1 z="2"/></logic_node_link><logic_node_link type="6"><voxel_pos_0 y="1" z="1"/><voxel_pos_1 x="-1" y="3" z="1"/></logic_node_link><logic_node_link type="6"><voxel_pos_0 y="1" z="1"/><voxel_pos_1 x="-1" y="1" z="1"/></logic_node_link><logic_node_link type="5"><voxel_pos_0 x="-1" y="1" z="1"/><voxel_pos_1 y="1" z="1"/></logic_node_link></logic_node_links></vehicle>
