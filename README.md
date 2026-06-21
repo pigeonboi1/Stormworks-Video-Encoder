@@ -5,7 +5,7 @@ Step 4: Take your xml files
 
 *Videos must be:
 .mp4 files
-96x(72 or less) pixels in size
+160x96 pixels in size exactly
 
 Videos cannot be:
 Variable frame rate
